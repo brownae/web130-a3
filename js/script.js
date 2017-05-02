@@ -1,6 +1,6 @@
 $(function() { // DOM Ready
-
     // Insert all scripts here
+
     $('nav ul li > a:not(:only-child)').click(function(e) {
     $(this).siblings('.nav-dropdown').toggle();
 
