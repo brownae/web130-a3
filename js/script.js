@@ -2,7 +2,13 @@ $(function() { // DOM Ready
     // Insert all scripts here
 
     $('nav ul li > a:not(:only-child)').click(function(e) {
-    $(this).siblings('.nav-dropdown').toggle();
+        if ($(document).width() >= 480 && $(document).width() <= 900){
+            //alert('Hello');
+            //$(this).siblings('.nav-dropdown').toggle().addClass('tablet-nav');
+            $('.nav-dropdown').toggleClass('tablet-nav');
+        }else
+            $(this).siblings('.nav-dropdown').toggle();
+            //$(this).siblings('.nav-dropdown').toggle();
 
     //Prevent other nav-dropdowns from opening when one is clicked
     $('.nav-dropdown').not($(this).siblings()).hide();

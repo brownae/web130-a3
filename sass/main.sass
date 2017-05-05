@@ -72,16 +72,8 @@ nav
                     border-top: 1px solid $white
                     //border-bottom: 2px solid $white
 
-
-
             ul li
                 min-width: 138px
-
-                @include tablet
-                    min-width: 75%
-                    display: flex
-                    justify-content: space-around
-
                 a
                     padding: 15px
                     line-height: 20px
@@ -102,10 +94,18 @@ nav
         @include phone
             position: static
             border-top: 1px solid $white
-        @include tablet
-            display: flex
-            justify-content: space-around
-            width: 100%
+//had to create a separate class for tablet. display: flex kept overriding the display none when part of ul.nav-dropdown. 
+.tablet-nav
+    position: absolute
+    z-index: 1
+    display: flex !important
+    justify-content: space-around
+    width: 100%
+    li
+        min-width: 75%
+        display: flex
+        justify-content: space-around
+
 
 
 .nav-mobile

@@ -97,11 +97,6 @@ nav {
             border-top: 1px solid #fff; } }
       nav ul li ul li {
         min-width: 138px; }
-        @media (min-width: 480px) and (max-width: 899px) {
-          nav ul li ul li {
-            min-width: 75%;
-            display: flex;
-            justify-content: space-around; } }
         nav ul li ul li a {
           padding: 15px;
           line-height: 20px; }
@@ -123,11 +118,17 @@ nav {
       nav ul.nav-dropdown {
         position: static;
         border-top: 1px solid #fff; } }
-    @media (min-width: 480px) and (max-width: 899px) {
-      nav ul.nav-dropdown {
-        display: flex;
-        justify-content: space-around;
-        width: 100%; } }
+
+.tablet-nav {
+  position: absolute;
+  z-index: 1;
+  display: flex !important;
+  justify-content: space-around;
+  width: 100%; }
+  .tablet-nav li {
+    min-width: 75%;
+    display: flex;
+    justify-content: space-around; }
 
 .nav-mobile {
   display: none;
